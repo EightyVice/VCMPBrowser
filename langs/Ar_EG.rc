@@ -1,0 +1,222 @@
+﻿// Microsoft Visual C++ generated resource script.
+//
+#include "../resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+//////////////////////////////////////////////////////////////////////////////
+//                 Arabic Translation by : Zeyad_Ahmed
+//                             Good Luck
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 英语(美国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ARABIC, SUBLANG_ARABIC_EG
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+
+IDC_VCMPBROWSER MENU
+BEGIN
+    POPUP "ملف(&F)"
+    BEGIN
+        MENUITEM "خروج(&X)",                       IDM_EXIT
+    END
+    POPUP "ادوات(&T)"
+    BEGIN
+        MENUITEM "اعدادات(&S)...",                IDM_TOOLS_SETTINGS
+    END
+    POPUP "مساعدة(&H)"
+    BEGIN
+        MENUITEM "&عن البرنامج(&A)...",                   IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 188, 68
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About VCMPBrowser"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDI_VCMPBROWSER,IDC_STATIC,14,14,20,20
+    LTEXT           "VCMPBrowser Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "حقوق النشر و التوزيع © 2016 ysc3839",IDC_STATIC,42,25,114,8
+    DEFPUSHBUTTON   "OK",IDOK,131,47,50,14,WS_GROUP
+    CONTROL         "Website: <a href=""http://www.vc-mp.org"">www.vc-mp.org</a>",0,
+                    "SysLink",WS_TABSTOP,42,36,114,8
+END
+
+IDD_LOADING DIALOGEX 0, 0, 200, 90
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_BORDER
+EXSTYLE WS_EX_NOACTIVATE
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Retrieving server list. Please wait...",IDC_STATIC,43,41,116,8
+END
+
+IDD_UPDATE DIALOGEX 0, 0, 265, 60
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Update"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "الغاء",IDCANCEL,208,39,50,14
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",WS_BORDER,15,15,235,14
+    LTEXT           "",IDC_TIPSTATIC,15,39,192,8
+END
+
+IDD_SET_GAME DIALOGEX 0, 0, 236, 74
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "اسم اللاعب:",IDC_STATIC,6,9,44,8
+    EDITTEXT        IDC_EDIT_PLAYERNAME,54,6,156,14,ES_AUTOHSCROLL
+    LTEXT           "مكان ملف GTAVC :",IDC_STATIC,6,24,57,8
+    EDITTEXT        IDC_EDIT_GTAPATH,6,36,222,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "تصفح...",IDC_BTN_BROWSE,180,54,50,14
+    PUSHBUTTON      "تحديد تلقائي لنسخة السي دي",IDC_BTN_CD,6,54,76,14
+    PUSHBUTTON      "تحديد تلقائي لنسخة Steam",IDC_BTN_STEAM,84,54,87,14
+END
+
+IDD_SET_UPDATE DIALOGEX 0, 0, 236, 122
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "تكرار تحديث اللعبة:",IDC_STATIC,6,8,83,8
+    COMBOBOX        IDC_COM_FREQ,90,6,96,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "رابط محدث اللعبة:",IDC_STATIC,6,24,64,8
+    EDITTEXT        IDC_EDIT_UPD_URL,6,36,222,14,ES_AUTOHSCROLL
+    LTEXT           "كلمة مررور محدث اللعبة: (Leave blank if you don't have it)",IDC_STATIC,6,54,190,8
+    EDITTEXT        IDC_EDIT_UPD_PASS,6,66,222,14,ES_AUTOHSCROLL
+    LTEXT           "رابط القائمة الرئيسية:",IDC_STATIC,6,84,49,8
+    EDITTEXT        IDC_EDIT_MASTER_URL,6,96,222,14,ES_AUTOHSCROLL
+END
+
+IDD_SET_UI DIALOGEX 0, 0, 236, 86
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "اللغة (language):",IDC_STATIC,6,8,35,8
+    COMBOBOX        IDC_COM_LANGUAGE,42,6,120,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "صفحة الرمز لمعلومات الخادم:",IDC_STATIC,6,68,84,8
+    COMBOBOX        IDC_COM_CHARSET,96,66,120,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "لون الخوادم الرسمية:",IDC_STATIC,6,27,66,8
+    CONTROL         "",IDC_STATIC_OFFICIAL_COLOR,"Static",SS_OWNERDRAW,78,27,18,8
+    PUSHBUTTON      "اختر...",IDC_BTN_OFFICIAL_COLOR,102,24,50,14
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "../resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_SET_UI, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 44
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_APP_TITLE           "متصفح VCMP"
+    IDS_FAVORITES           "المفضلة"
+    IDS_INTERNET            "الانترنت"
+    IDS_OFFICIAL            "رسمي"
+    IDS_HISTORY             "السجل"
+    IDS_SERVERNAME          "اسم اخادم"
+    IDS_PING                "Ping"
+    IDS_PLAYERS             "اللاعبين"
+    IDS_VERSION             "النسخة"
+    IDS_GAMEMODE            "نظام اللعب"
+    IDS_MAPNAME             "اسم الخريطة"
+    IDS_LASTPLAYED          "اخر مرة لعب فيها"
+    IDS_PLAYERSLIST         "اللاعبين"
+    IDS_SERVERINFO          "معلومات الخادم"
+    IDS_SERVERIP            "IP الخادم:"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SERVERNAME_         "اسم الخادم:"
+    IDS_SERVERPLAYERS       "لاعبي الخادم:"
+    IDS_SERVERPING          "ping الخادم:"
+    IDS_SERVERGAMEMODE      "نظام لعب الخادم:"
+    IDS_LAN                 "الشبكة المحلية LAN"
+    IDS_MASTERLISTFAILED    "لا يمكن احضار المعلومات من القائمة الرئيسية.\n%s"
+    IDS_ERROR               "خطأ"
+    IDS_MASTERLISTDATA      "لا يمكن تحليل بيانات القائمة الرئيسية."
+    IDS_SET_GAME            "اللعبة"
+    IDS_SET_UPDATE          "التحديث"
+    IDS_SET_UI              "الواجهة الرسومية"
+    IDS_SETTINGS            "الاعدادات"
+    IDS_EVERY_START         "عند البدء"
+    IDS_EVERY_DAY           "كل يوم"
+    IDS_EVERY_2DAY          "كل يومين"
+    IDS_EVERY_WEEK          "كل اسبوع"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_NEVER               "ابدا"
+END
+
+#endif    // 英语(美国) resources
+/////////////////////////////////////////////////////////////////////////////
